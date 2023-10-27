@@ -1,7 +1,7 @@
 !#bin/bash
-tar cpf /home/kali/study/bachup "created on `date '+%d-%B-%Y'`.tar" /home
-tar cpf /home/kali/study/bachup "created on `date '+%d-%B-%Y'`.tar" /etc/vsftpd.conf
-tar cpf /home/kali/study/bachup "created on `date '+%d-%B-%Y'`.tar" /etc/ssh/sshd_config
-tar cpf /home/kali/study/bachup "created on `date '+%d-%B-%Y'`.tar" /etc/xrdp/startwm.sh
-tar cpf /home/kali/study/bachup "created on `date '+%d-%B-%Y'`.tar"  /etc/xrdp
-tar cpf /home/kali/study/bachup "created on `date '+%d-%B-%Y'`.tar"  /var/log
+tar -cvpzf backup_home.tar.gz --exclude=backup_home --one-file-system /home
+tar -cvpzf backup_vsf.tar.gz --exclude=backup_vsf --one-file-system /etc/vsftpd.conf
+tar -cvpzf backup_sshd.tar.gz --exclude=backup_sshd --one-file-system /etc/ssh/sshd_config
+tar -cvpzf backup_startwm.tar.gz --exclude=backup_startwm --one-file-system /etc/xrdp/startwm.sh
+tar -cvpzf backup_xrdp.tar.gz --exclude=backup_xrdp --one-file-system /etc/xrdp
+tar -cvpzf backup_log.tar.gz --exclude=backup_log --one-file-system /var/log
