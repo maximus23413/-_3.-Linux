@@ -1,0 +1,18 @@
+#!bin/bash
+
+if [ ' cat "/etc/apt/sources.list" | egrep "http://deb.debian.org/debian jessie-backports" ' ];
+then echo Backports is already installed
+else apt-get -t jessie-backports install iceweasel
+fi 
+sudo apt update
+sudo apt install apache2
+sudo apt install python
+sudo apt install openssh-server -y
+sudo systemctl enable ssh
+sudo sync && sudo echo 3 > /proc/sys/vm/drop_caches
+sudo gconftool-2 -t str -s /apps/compiz/general/allscreens/options/cursor_theme "DMZ-Black" 
+sudo gconftool-2 -t bool -s /desktop/gnome/file_views/show_backup_files true 
+sudo gconftool-2 -t bool -s /desktop/gnome/file_views/show_hidden_files true 
+sudo gconftool-2 -t bool -s /desktop/gnome/interface/buttons_have_icons true 
+sudo mkdir /home/thanatos
+sudo cp /media/hdd/Installation_script/conky/autorun_conky.sh /home/thanatos
