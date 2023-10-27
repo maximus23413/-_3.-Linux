@@ -1,0 +1,1 @@
+logwatch --detail Med --mailto kali--service sshd2,ftp,rdp
