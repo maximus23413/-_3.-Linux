@@ -1,1 +1,8 @@
 
+!#bin/bash
+tar cpf /tmp/full-backup "created on `date '+%d-%B-%Y'`.tar" /home
+tar cpf /tmp/full-backup "created on `date '+%d-%B-%Y'`.tar" /etc/vsftpd.conf
+tar cpf /tmp/full-backup "created on `date '+%d-%B-%Y'`.tar" /etc/ssh/sshd_config
+tar cpf /tmp/full-backup "created on `date '+%d-%B-%Y'`.tar" /etc/xrdp/startwm.sh
+tar cpf /tmp/full-backup "created on `date '+%d-%B-%Y'`.tar"  /etc/xrdp
+tar cpf /tmp/full-backup "created on `date '+%d-%B-%Y'`.tar"  /var/log
